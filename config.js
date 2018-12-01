@@ -1,11 +1,11 @@
 module.exports = {
   rethinkdb: {
-    host: 'localhost',
+    host: 'rethinkdb_container',
     port: 28015,
     authKey: '',
     db: 'rethinkdb_ex'
   },
   express: {
-     port: 3000
+     port: 8080
   }
 };
