@@ -135,8 +135,16 @@ function handleError(err, req, res, next) {
  */
 function startExpress(connection) {
   app._rdbConn = connection;
-  app.listen(config.express.port);
-  console.log('Listening on port ' + config.express.port);
+
+  try
+    {
+        app.listen(config.express.port);
+        console.log('Listening on port ' + config.express.port);
+    }
+    catch (err)
+    {
+        console.error(err.message);
+    }
 }
 
 /*
